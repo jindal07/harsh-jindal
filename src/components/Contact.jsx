@@ -1,7 +1,56 @@
-import React from 'react';
-import { Mail, Linkedin, Github, Trophy, Award, Star, Rocket } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Linkedin, Github, Trophy, Award, Star, Rocket, CheckCircle, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mwpbagrr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `New Portfolio Contact: ${formData.name}`,
+          _replyto: formData.email,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-16 sm:py-20 bg-white dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -86,11 +135,35 @@ const Contact = () => {
             <div className="bg-white dark:bg-gray-700 p-6 sm:p-8 rounded-xl h-full">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-6 sm:mb-8">🚀 Ready to Team Up?</h3>
               
-              <form className="space-y-4 sm:space-y-6">
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg flex items-center space-x-3">
+                  <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
+                  <div>
+                    <p className="text-green-800 dark:text-green-200 font-medium">Mission Successful! 🎉</p>
+                    <p className="text-green-600 dark:text-green-300 text-sm">Your message has been sent and saved to Excel!</p>
+                  </div>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg flex items-center space-x-3">
+                  <AlertCircle className="text-red-600 flex-shrink-0" size={20} />
+                  <div>
+                    <p className="text-red-800 dark:text-red-200 font-medium">Mission Failed! 😞</p>
+                    <p className="text-red-600 dark:text-red-300 text-sm">Please try again or contact directly via email.</p>
+                  </div>
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Player Name</label>
                   <input 
                     type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:border-green-500 dark:focus:border-green-400 focus:outline-none transition-all duration-300 text-sm sm:text-base"
                     placeholder="Enter your name"
                   />
@@ -100,6 +173,10 @@ const Contact = () => {
                   <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Communication Portal</label>
                   <input 
                     type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:border-green-500 dark:focus:border-green-400 focus:outline-none transition-all duration-300 text-sm sm:text-base"
                     placeholder="your.email@example.com"
                   />
@@ -109,6 +186,10 @@ const Contact = () => {
                   <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Quest Details</label>
                   <textarea 
                     rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:border-green-500 dark:focus:border-green-400 focus:outline-none transition-all duration-300 resize-none text-sm sm:text-base"
                     placeholder="Tell me about your project or opportunity..."
                   ></textarea>
@@ -116,12 +197,23 @@ const Contact = () => {
                 
                 <button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2.5 sm:py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl text-sm sm:text-base"
+                  disabled={isSubmitting}
+                  className={`w-full font-bold py-2.5 sm:py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl text-sm sm:text-base ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white'
+                  }`}
                 >
                   <Rocket size={18} />
-                  <span>Launch Mission!</span>
+                  <span>{isSubmitting ? 'Launching...' : 'Launch Mission!'}</span>
                 </button>
               </form>
+
+              <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-800">
+                <p className="text-xs text-blue-700 dark:text-blue-300 text-center">
+                  📊 All submissions are automatically saved to Excel spreadsheet for easy tracking!
+                </p>
+              </div>
             </div>
           </div>
         </div>

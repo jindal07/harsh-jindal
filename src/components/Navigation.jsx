@@ -19,7 +19,7 @@ const Navigation = ({ isDark, toggleTheme, activeSection, scrollToSection, coins
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 sm:space-x-4">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-500 via-red-600 to-red-700 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg sm:text-xl">H</span>
+              <span className="text-white font-bold text-lg sm:text-xl">HJ</span>
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg sm:text-xl text-gray-800 dark:text-white">Harsh Jindal</span>
