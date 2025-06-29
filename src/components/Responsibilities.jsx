@@ -33,7 +33,7 @@ const Responsibilities = () => {
   ];
 
   return (
-    <section id="responsibilities" className="py-16 sm:py-20 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
+    <section id="responsibilities" className="py-16 sm:py-20 bg-purple-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="head text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
