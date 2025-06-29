@@ -140,7 +140,7 @@ const Contact = () => {
                   <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
                   <div>
                     <p className="text-green-800 dark:text-green-200 font-medium">Mission Successful! 🎉</p>
-                    <p className="text-green-600 dark:text-green-300 text-sm">Your message has been sent and saved to Excel!</p>
+                    <p className="text-green-600 dark:text-green-300 text-sm">Your message has been sent!</p>
                   </div>
                 </div>
               )}
@@ -211,7 +211,7 @@ const Contact = () => {
 
               <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-800">
                 <p className="text-xs text-blue-700 dark:text-blue-300 text-center">
-                  📊 All submissions are automatically saved to Excel spreadsheet for easy tracking!
+                  📊 Submit the form above to contact with me!
                 </p>
               </div>
             </div>
