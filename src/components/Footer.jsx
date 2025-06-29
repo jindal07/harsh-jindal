@@ -7,9 +7,9 @@ const Footer = ({ coins }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6 sm:mb-8">
           <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-lg sm:text-xl">H</span>
+            <span className="text-white font-bold text-lg sm:text-xl">HJ</span>
           </div>
-          <span className="text-2xl sm:text-3xl font-bold">Harsh Jindal</span>
+          <span className="head text-2xl sm:text-3xl font-bold">Harsh Jindal</span>
           <div className="flex items-center space-x-2 bg-yellow-900 px-3 sm:px-4 py-2 rounded-full border border-yellow-700">
             <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full shadow-sm"></div>
             <span className="text-base sm:text-lg font-bold text-yellow-400">{coins}</span>

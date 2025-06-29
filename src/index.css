@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'SuperMario256';
+  src: url('../public/font/SuperMario256.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.head{
+    font-family: 'SuperMario256', cursive;
+}

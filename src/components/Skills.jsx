@@ -13,7 +13,7 @@ const Skills = () => {
     <section id="skills" className="py-16 sm:py-20 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-purple-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+          <h2 className="head text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
             ⚡ Power-Up Collection ⚡
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">Special abilities and tools mastered</p>

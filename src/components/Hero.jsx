@@ -40,7 +40,7 @@ const Hero = ({ collectCoin, coins, showCoinAnimation }) => {
       <div className="text-center max-w-4xl mx-auto relative z-10">
         {/* Main Title with Enhanced Animation */}
         <div className="relative mb-6 sm:mb-8">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold animate-bounce bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent leading-tight">
+          <h1 className="head text-4xl sm:text-6xl md:text-8xl font-bold animate-bounce bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent leading-tight">
             HARSH JINDAL
           </h1>
           <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 animate-spin">
@@ -78,14 +78,14 @@ const Hero = ({ collectCoin, coins, showCoinAnimation }) => {
           <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full border border-gray-200 dark:border-gray-700 shadow-lg">
             <div className="flex items-center justify-center space-x-2">
               <Zap className="text-blue-500" size={18} />
-              <span className="font-bold text-gray-800 dark:text-white text-sm sm:text-base">2+</span>
+              <span className="font-bold text-gray-800 dark:text-white text-sm sm:text-base">1+</span>
               <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Years Coding</span>
             </div>
           </div>
           <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full border border-gray-200 dark:border-gray-700 shadow-lg">
             <div className="flex items-center justify-center space-x-2">
               <Gamepad2 className="text-purple-500" size={18} />
-              <span className="font-bold text-gray-800 dark:text-white text-sm sm:text-base">10+</span>
+              <span className="font-bold text-gray-800 dark:text-white text-sm sm:text-base">5+</span>
               <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Projects</span>
             </div>
           </div>
