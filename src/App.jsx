@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
+import Responsibilities from './components/Responsibilities';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -29,7 +30,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'about', 'experience', 'responsibilities', 'projects', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (let section of sections) {
@@ -85,6 +86,7 @@ function App() {
       
       <About />
       <Experience />
+      <Responsibilities />
       <Projects />
       <Skills />
       <Contact />

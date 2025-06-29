@@ -19,7 +19,7 @@ const Navigation = ({ isDark, toggleTheme, activeSection, scrollToSection, coins
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 sm:space-x-4">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-500 via-red-600 to-red-700 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg sm:text-xl">HJ</span>
+              <span className="text-white font-bold text-lg sm:text-xl">H</span>
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg sm:text-xl text-gray-800 dark:text-white">Harsh Jindal</span>
@@ -32,17 +32,17 @@ const Navigation = ({ isDark, toggleTheme, activeSection, scrollToSection, coins
           </div>
           
           <div className="hidden lg:flex items-center space-x-1">
-            {['home', 'about', 'experience', 'projects', 'skills', 'contact'].map((section) => (
+            {['home', 'about', 'experience', 'responsibilities', 'projects', 'skills', 'contact'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`px-5 py-2.5 rounded-xl font-medium transition-all duration-300 ${
+                className={`px-4 py-2.5 rounded-xl font-medium transition-all duration-300 text-sm ${
                   activeSection === section 
                     ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/25' 
                     : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
                 }`}
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {section === 'responsibilities' ? 'Leadership' : section.charAt(0).toUpperCase() + section.slice(1)}
               </button>
             ))}
           </div>
@@ -68,17 +68,17 @@ const Navigation = ({ isDark, toggleTheme, activeSection, scrollToSection, coins
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700">
             <div className="grid grid-cols-2 gap-2 mt-4">
-              {['home', 'about', 'experience', 'projects', 'skills', 'contact'].map((section) => (
+              {['home', 'about', 'experience', 'responsibilities', 'projects', 'skills', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => handleMobileNavClick(section)}
-                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 text-center ${
+                  className={`px-3 py-3 rounded-xl font-medium transition-all duration-300 text-center text-sm ${
                     activeSection === section 
                       ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg' 
                       : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
                   }`}
                 >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  {section === 'responsibilities' ? 'Leadership' : section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
               ))}
             </div>
