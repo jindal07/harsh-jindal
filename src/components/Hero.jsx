@@ -68,13 +68,7 @@ const Hero = ({ collectCoin, coins, showCoinAnimation }) => {
 
         {/* Stats Row */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 mb-10 sm:mb-12">
-          <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full border border-gray-200 dark:border-gray-700 shadow-lg">
-            <div className="flex items-center justify-center space-x-2">
-              <Trophy className="text-yellow-500" size={18} />
-              <span className="font-bold text-gray-800 dark:text-white text-sm sm:text-base">97.13%</span>
-              <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">JEE Mains</span>
-            </div>
-          </div>
+          
           <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full border border-gray-200 dark:border-gray-700 shadow-lg">
             <div className="flex items-center justify-center space-x-2">
               <Zap className="text-blue-500" size={18} />
