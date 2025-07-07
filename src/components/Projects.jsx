@@ -29,6 +29,21 @@ const Projects = () => {
       world: "Pipe World",
       difficulty: "Advanced"
     },
+    {
+      title: "VogueNext",
+      description: "VogueNext, a modern clothing e-commerce store, focused on delivering trendy and affordable fashion through a user-centric online platform.",
+      technologies: ["React.js", "Tailwind CSS", "JavaScript","MongoDB", "Express.js" ,"Node.js"],
+      
+      github: "https://github.com/jindal07/vogueNext",
+      highlights: [
+        "Built with MERN Stack (MongoDB, Express.js, React.js, Node.js) for a seamless full-stack application.",
+        "Secure Payment Integration using Razorpay for hassle-free checkout.",
+        "Admin Dashboard to manage products, users, and orders.",
+        'Custom Hooks and Context API used for efficient state management.'
+      ],
+      world: "Pipe World",
+      difficulty: "Expert"
+    }
   ];
 
   return (
