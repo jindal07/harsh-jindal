@@ -53,7 +53,7 @@ const Projects = () => {
         "Express.js",
         "Node.js",
       ],
-
+      link:"https://vogue-next.vercel.app/",
       github: "https://github.com/jindal07/vogueNext",
       highlights: [
         "Built with MERN Stack (MongoDB, Express.js, React.js, Node.js) for a seamless full-stack application.",
