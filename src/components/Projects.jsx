@@ -4,6 +4,29 @@ import { ExternalLink, Gamepad2, Trophy, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "VeloAI",
+      description:
+        "VeloAI is a comprehensive AI-powered platform that provides various content creation tools including article writing, blog title generation, image creation, background removal, object removal, and resume review services. Built with modern web technologies and powered by cutting-edge AI APIs.",
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "Gemini API",
+        "JavaScript",
+        "PostgreSQL",
+        "Express.js",
+        "Node.js",
+      ],
+      link: "https://vello-ai.vercel.app",
+      github: "https://github.com/jindal07/veloAi",
+      highlights: [
+        "Developed a full-stack AI-powered content platform using React, Node.js, PostgreSQL, and Clerk authentication.",
+        "Built AI tools for article/blog generation, text-to-image, background/object removal, and resume review.",
+        "Deployed & optimized app on Vercel with Cloudinary integration and performance enhancements.",
+      ],
+      world: "Cloud World",
+      difficulty: "Expert",
+    },
+    {
       title: "SyntaxSniffer",
       description:
         "AI-powered code reviewer using React.js, TailwindCSS, and Gemini API to analyze and provide intelligent feedback on code quality and optimization.",
@@ -35,12 +58,11 @@ const Projects = () => {
         " Implemented in-memory PDF parsing and AI analysis pipeline using Node.js and React, ensuring privacy with no data storage.",
         "Developed an in-memory Node.js backend with PDF parsing and Gemini integration, ensuring complete privacy with no file storage and real-time health report interpretation.",
         "Optimized for user experience with drag-and-drop PDF upload, animated loading states, and structured output cards for Summary, Key Indicators, and Recommendations.",
-        
       ],
       world: "Cloud World",
       difficulty: "Advanced",
     },
-    
+
     {
       title: "VogueNext",
       description:
@@ -53,7 +75,7 @@ const Projects = () => {
         "Express.js",
         "Node.js",
       ],
-      link:"https://vogue-next.vercel.app/",
+      link: "https://vogue-next.vercel.app/",
       github: "https://github.com/jindal07/vogueNext",
       highlights: [
         "Built with MERN Stack (MongoDB, Express.js, React.js, Node.js) for a seamless full-stack application.",
@@ -78,7 +100,6 @@ const Projects = () => {
       world: "Pipe World",
       difficulty: "Advanced",
     },
-    
   ];
 
   return (
