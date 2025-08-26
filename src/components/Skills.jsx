@@ -5,7 +5,7 @@ const Skills = () => {
   const skills = [
     { category: "Programming Languages", items: ["Java", "C", "SQL", "JavaScript"], powerUp: "Fire Flower" },
     { category: "Web Development", items: ["HTML", "CSS", "React.js", "Node.js", "Express.js", "Next.js", "Tailwind CSS","PostgreSQL","MongoDB","Auth","JWT","REST APIs","Redux",], powerUp: "Super Star" },
-    { category: "Developer Tools", items: ["Github", "NPM", "VS Code"], powerUp: "Mushroom" },
+    { category: "Developer Tools", items: ["Git","CI/CD","Github", "NPM", "VS Code"], powerUp: "Mushroom" },
     { category: "Soft Skills", items: ["Team management", "Leadership", "Communication", "Photography", "Video Editing"], powerUp: "Cape Feather" }
   ];
 
