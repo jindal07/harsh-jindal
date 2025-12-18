@@ -4,10 +4,23 @@ import { Briefcase } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
+      title: "Full Stack Developer Intern",
+      company: "Flexzistay",
+      location: "Remote",
+      period: "May 2025 – October 2025",
+      responsibilities: [
+        "Developed and maintained a hotel booking platform enabling hourly stay bookings (3, 6, 9, 12 hours) with flexible check-in/check-out times.",
+        "Integrated Cloudinary for secure media management and AWS SNS for automated OTP delivery, enhancing user verification reliability by 40 percent.",
+        "Developed search, sort, and pagination modules for the admin dashboard, streamlining data management and improving response time by 35 percent."
+        
+      ],
+      level: "World 3"
+    },
+    {
       title: "Summer Intern",
       company: "Celebal Technologies",
       location: "Remote",
-      period: "May 2025 – Current",
+      period: "May 2025 – July 2025",
       responsibilities: [
         "Implemented state management solutions (Context API/hooks) and followed best practices for scalable and maintainable front-end code",
         "Ensured responsiveness and cross-browser compatibility using CSS3, Flexbox, and media queries"

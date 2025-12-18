@@ -7,7 +7,7 @@ const Responsibilities = () => {
       title: "Coordinator ",
       organization: "Imagination- The photography club of LNMIIT",
       period: "2024 - 2025",
-      description: "Led photography initiatives, organized workshops, and managed event coverage.",
+      description: "Directed photography projects, conducted workshops, and coordinated event coverage involving 50+ participants.",
       icon: Crown,
       level: "Leadership Castle"
       
@@ -16,7 +16,7 @@ const Responsibilities = () => {
       title: "Sponsorship and Management Head ",
       organization: "Vivacity’25 - Annual cultural festival of LNMIIT",
       period: "2024 - 2025",
-      description: "Spearheaded sponsorship acquisition and financial planning for the event.",
+      description: " Led a 12-member team to acquire sponsorships worth 4L+, managing vendor relations and event budgeting.",
       
       icon: Users,
       level: "Team Fortress"
@@ -25,7 +25,7 @@ const Responsibilities = () => {
       title: "Sponsorship and Marketing Lead",
       organization: "Vivacity’24 - Annual cultural festival of LNMIIT",
       period: "2023 - 2024",
-      description: "Managed marketing strategies and partnered with sponsors for event success.",
+      description: "Developed marketing campaigns across social media, achieving 20 percent higher engagement and expanding sponsor outreach by 15 percent.",
       
       icon: Target,
       level: "Event Kingdom"
